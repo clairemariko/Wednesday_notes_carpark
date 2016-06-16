@@ -9,11 +9,22 @@ public abstract class Vehicle {
 	protected String colour;
 	protected int maxOccupance;
 	protected int speed;
+	protected Ringable ringer;
 	
 	//constructors
 	protected Vehicle(){
 		speed = 5;
 	}
+	//constructor for the ringable interface
+	protected Vehicle(Ringable ringer){
+		this.ringer = ringer;
+	}
+	
+	//method that will go down to the children
+	public String giveWarning(){
+		return ringer.makeSound();
+	}
+	
 	//this is not abstract as its not a behaviour
 	//getters and setters
 	public int getNumberOfWheels() {

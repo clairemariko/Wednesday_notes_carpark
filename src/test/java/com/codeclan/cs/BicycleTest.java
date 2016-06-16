@@ -30,4 +30,24 @@ public class BicycleTest
     	Bicycle b = new Bicycle();
     	System.out.println(b);
     }
+    
+    @Test
+    public void testBicycleWarning(){
+    	Bicycle b = new Bicycle();
+    	System.out.println(b.giveWarning());
+    }
+    
+    @Test
+    public void testBicycleWarningFail(){
+    	Bicycle b = new Bicycle();
+    	System.out.println(b.giveWarning());
+    }
 }
+
+
+
+
+
+
+
+

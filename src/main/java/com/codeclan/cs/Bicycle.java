@@ -7,12 +7,15 @@ public class Bicycle extends Vehicle {
 	private String name;
 	private int currentGear;
 	private int gears;
+//	private Bell bell; we dont need this anymore because we have create it in the first constructor
 
 	
 //first constructor
 
 	public Bicycle(){
-		super();
+		//we want to use our own constructor
+		this(new Bell());
+		//
 		gears =21;
 		colour = "Tomato";
 		numberOfWheels = 2;
@@ -25,6 +28,11 @@ public class Bicycle extends Vehicle {
 		this.colour = colour;
 	}
 	
+	
+	//third constructor that bring the parent object
+	private Bicycle(Ringable ringer){
+		super(ringer);
+	}
 	
 
 	

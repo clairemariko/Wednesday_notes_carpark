@@ -4,7 +4,9 @@ public class Car extends Vehicle{
 
 	private int numberOfDoors;
 	
+	
 	public Car(){
+		super(new Horn());
 		//calling the constructor in your parent
 		
 		numberOfDoors =5;

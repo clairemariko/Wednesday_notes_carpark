@@ -18,13 +18,16 @@ public class CarPark {
 	 }
 	 
 	 
-	 public boolean exit(Vehicle v) throws VehicleNotFoundException{
+	 public boolean exit(Vehicle v) throws Exception{
+		 if(v == null) {
+			 throw new Exception("uh oh!");
+		 }
 		 for(Vehicle parkedVehicle : carPark){
 			if(parkedVehicle.getRegistration().equals(v.getRegistration())) {
 			carPark.remove(v);
 			return true;
 		  }
 		 }
-	 throw new VehicleNotFoundException(v);
+		 return false;
 	 }
 }
